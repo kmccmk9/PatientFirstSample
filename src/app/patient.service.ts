@@ -10,8 +10,7 @@ export class PatientService {
   constructor(private _http: Http) { }
 
   getPatients() {
-    return this._http.get('/api/patient')
-      .map(result => this.result = result.json().data);
+    return this._http.get('/api/patient');
   }
 
 }

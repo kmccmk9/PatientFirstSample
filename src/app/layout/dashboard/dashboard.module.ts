@@ -15,9 +15,13 @@ import {
 } from './components';
 import { StatModule } from '../../shared';
 
+ import { PatientService } from '../../patient.service';
+ import { HttpModule } from '@angular/http';
+
 @NgModule({
     imports: [
         CommonModule,
+        HttpModule,
         NgbCarouselModule.forRoot(),
         NgbAlertModule.forRoot(),
         DashboardRoutingModule,
@@ -28,6 +32,7 @@ import { StatModule } from '../../shared';
         TimelineComponent,
         NotificationComponent,
         ChatComponent
-    ]
+    ],
+    providers: [PatientService]
 })
 export class DashboardModule { }

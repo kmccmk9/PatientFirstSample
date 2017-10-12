@@ -66,11 +66,13 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
+                                <th>Id</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let patient of patients">
                                 <td>{{ patient.givename }}</td>
+                                <td>{{ patient._id }}</td>
                             </tr>
                         </tbody>
                     </table>

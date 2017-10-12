@@ -290,9 +290,7 @@ var PatientService = (function () {
         this._http = _http;
     }
     PatientService.prototype.getPatients = function () {
-        var _this = this;
-        return this._http.get('/api/patient')
-            .map(function (result) { return _this.result = result.json().data; });
+        return this._http.get('/api/patient');
     };
     return PatientService;
 }());

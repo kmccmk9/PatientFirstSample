@@ -14,16 +14,8 @@ export class DashboardComponent implements OnInit {
     public patients: Array<any> = [];
 
     constructor(private _patientService: PatientService) {
-        this._patientService.getPatients()
-            .subscribe(res => {
-                this.patients = [];
-                res.forEach(element => {
-                    var newPatient = {
-                        givename: element.givename
-                    };
-                    this.patients.push(newPatient);
-                });
-            });//this.patients = res);
+        
+        this.patients.push({ Test: 'Test' });
 
         this.sliders.push(//{
         //     imagePath: 'assets/images/slider1.jpg',
@@ -58,10 +50,24 @@ export class DashboardComponent implements OnInit {
     }
 
     ngOnInit() {
+        this._patientService.getPatients().subscribe(resp => {
+            this.patients = resp.json();
+            console.log(resp.json()); //.json for json response, .text for text response
+            //console.log(resp.headers);
+        }, err => {
+            if (err.error instanceof Error) {
+                //Client side or network error
+                console.log('An error occured:', err.error.message);
+            } else {
+                //Backend returned unsuccessful response code
+                console.log('Backend return code ${err.status}, body was: ${err.error}');
+            }
+        });
     }
 
     public closeAlert(alert: any) {
         const index: number = this.alerts.indexOf(alert);
         this.alerts.splice(index, 1);
     }
+
 }

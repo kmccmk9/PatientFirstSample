@@ -237,7 +237,7 @@ DashboardRoutingModule = __decorate([
 /***/ "../../../../../src/app/layout/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div [@routerTransition]>\r\n    <h2 class=\"text-muted\">Dashboard <small>Statistics Overview</small></h2>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n            <ngb-carousel>\r\n                <ng-template ngbSlide *ngFor=\"let slider of sliders\">\r\n                    <img class=\"img-fluid mx-auto d-block\" [src]=\"slider.imagePath\" alt=\"Random first slide\" width=\"100%\">\r\n                    <div class=\"carousel-caption\">\r\n                        <h3>{{slider.label}}</h3>\r\n                        <p>{{slider.text}}</p>\r\n                    </div>\r\n                </ng-template>\r\n            </ngb-carousel>\r\n        </div>\r\n    </div>\r\n    <hr>\r\n    <div class=\"row\">\r\n        <div class=\"col-xl-3 col-lg-6\">\r\n            <app-stat [bgClass]=\"'card-primary'\" [icon]=\"'fa-comments'\" [count]=\"26\" [label]=\"'New Comments!'\"></app-stat>\r\n        </div>\r\n        <div class=\"col-xl-3 col-lg-6\">\r\n            <app-stat [bgClass]=\"'card-info'\" [icon]=\"'fa-tasks'\" [count]=\"12\" [label]=\"'New task!'\"></app-stat>\r\n        </div>\r\n        <div class=\"col-xl-3 col-lg-6\">\r\n            <app-stat [bgClass]=\"'card-success'\" [icon]=\"'fa-shopping-cart'\" [count]=\"124\" [label]=\"'New Orders!'\"></app-stat>\r\n        </div>\r\n        <div class=\"col-xl-3 col-lg-6\">\r\n            <app-stat [bgClass]=\"'card-danger'\" [icon]=\"'fa-support'\" [count]=\"13\" [label]=\"'New Health Alerts!'\"></app-stat>\r\n        </div>\r\n    </div>\r\n    <hr />\r\n    <ngb-alert [type]=\"alert.type\" (close)=\"closeAlert(alert)\" *ngFor=\"let alert of alerts\">{{ alert.message }}</ngb-alert>\r\n    <hr />\r\n    <!-- <div class=\"row\">\r\n        <div class=\"col-lg-8\">\r\n            <div class=\"card card-default\">\r\n                <div class=\"card-header\">\r\n                    <i class=\"fa fa-clock-o fa-fw\"></i> Responsive Timeline\r\n                </div>\r\n        <app-timeline></app-timeline>\r\n    </div> -->\r\n    <!-- /.card -->\r\n    <!-- /.col-lg-8 -->\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-4\">\r\n            <div class=\"card card-default\">\r\n                <div class=\"card-header\">\r\n                    <i class=\"fa fa-bell fa-fw\"></i> Notifications card\r\n                </div>\r\n                <!-- /.card-header -->\r\n                <app-notification></app-notification>\r\n                <!-- /.card-body -->\r\n            </div>\r\n        </div>\r\n        <div class=\"col-lg-4\">\r\n            <app-chat></app-chat>\r\n        </div>\r\n    </div>\r\n    <!-- /.col-lg-4 -->\r\n    <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n            <div class=\"card mb-3\">\r\n                <div class=\"card-header\">Patients</div>\r\n                <div class=\"card-block table-responsive\">\r\n                    <table class=\"table table-hover table-striped\">\r\n                        <thead>\r\n                            <tr>\r\n                                <th>Name</th>\r\n                            </tr>\r\n                        </thead>\r\n                        <tbody>\r\n                            <tr *ngFor=\"let patient of patients\">\r\n                                <td>{{ patient.givename }}</td>\r\n                            </tr>\r\n                        </tbody>\r\n                    </table>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div [@routerTransition]>\r\n    <h2 class=\"text-muted\">Dashboard <small>Statistics Overview</small></h2>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n            <ngb-carousel>\r\n                <ng-template ngbSlide *ngFor=\"let slider of sliders\">\r\n                    <img class=\"img-fluid mx-auto d-block\" [src]=\"slider.imagePath\" alt=\"Random first slide\" width=\"100%\">\r\n                    <div class=\"carousel-caption\">\r\n                        <h3>{{slider.label}}</h3>\r\n                        <p>{{slider.text}}</p>\r\n                    </div>\r\n                </ng-template>\r\n            </ngb-carousel>\r\n        </div>\r\n    </div>\r\n    <hr>\r\n    <div class=\"row\">\r\n        <div class=\"col-xl-3 col-lg-6\">\r\n            <app-stat [bgClass]=\"'card-primary'\" [icon]=\"'fa-comments'\" [count]=\"26\" [label]=\"'New Comments!'\"></app-stat>\r\n        </div>\r\n        <div class=\"col-xl-3 col-lg-6\">\r\n            <app-stat [bgClass]=\"'card-info'\" [icon]=\"'fa-tasks'\" [count]=\"12\" [label]=\"'New task!'\"></app-stat>\r\n        </div>\r\n        <div class=\"col-xl-3 col-lg-6\">\r\n            <app-stat [bgClass]=\"'card-success'\" [icon]=\"'fa-shopping-cart'\" [count]=\"124\" [label]=\"'New Orders!'\"></app-stat>\r\n        </div>\r\n        <div class=\"col-xl-3 col-lg-6\">\r\n            <app-stat [bgClass]=\"'card-danger'\" [icon]=\"'fa-support'\" [count]=\"13\" [label]=\"'New Health Alerts!'\"></app-stat>\r\n        </div>\r\n    </div>\r\n    <hr />\r\n    <ngb-alert [type]=\"alert.type\" (close)=\"closeAlert(alert)\" *ngFor=\"let alert of alerts\">{{ alert.message }}</ngb-alert>\r\n    <hr />\r\n    <!-- <div class=\"row\">\r\n        <div class=\"col-lg-8\">\r\n            <div class=\"card card-default\">\r\n                <div class=\"card-header\">\r\n                    <i class=\"fa fa-clock-o fa-fw\"></i> Responsive Timeline\r\n                </div>\r\n        <app-timeline></app-timeline>\r\n    </div> -->\r\n    <!-- /.card -->\r\n    <!-- /.col-lg-8 -->\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-4\">\r\n            <div class=\"card card-default\">\r\n                <div class=\"card-header\">\r\n                    <i class=\"fa fa-bell fa-fw\"></i> Notifications card\r\n                </div>\r\n                <!-- /.card-header -->\r\n                <app-notification></app-notification>\r\n                <!-- /.card-body -->\r\n            </div>\r\n        </div>\r\n        <div class=\"col-lg-4\">\r\n            <app-chat></app-chat>\r\n        </div>\r\n    </div>\r\n    <!-- /.col-lg-4 -->\r\n    <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n            <div class=\"card mb-3\">\r\n                <div class=\"card-header\">Patients</div>\r\n                <div class=\"card-block table-responsive\">\r\n                    <table class=\"table table-hover table-striped\">\r\n                        <thead>\r\n                            <tr>\r\n                                <th>Name</th>\r\n                                <th>Id</th>\r\n                            </tr>\r\n                        </thead>\r\n                        <tbody>\r\n                            <tr *ngFor=\"let patient of patients\">\r\n                                <td>{{ patient.givename }}</td>\r\n                                <td>{{ patient._id }}</td>\r\n                            </tr>\r\n                        </tbody>\r\n                    </table>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -281,22 +281,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var DashboardComponent = (function () {
     function DashboardComponent(_patientService) {
-        var _this = this;
         this._patientService = _patientService;
         this.alerts = [];
         this.sliders = [];
         this.patients = [];
-        this._patientService.getPatients()
-            .subscribe(function (res) {
-            _this.patients = [];
-            res.forEach(function (element) {
-                var newPatient = {
-                    givename: element.givename
-                };
-                _this.patients.push(newPatient);
-            });
-        }); //this.patients = res);
-        this.patients.push({ givename: "Kyle Corsi" });
+        this.patients.push({ Test: 'Test' });
         this.sliders.push(//{
         //     imagePath: 'assets/images/slider1.jpg',
         //     label: 'First slide label',
@@ -328,6 +317,21 @@ var DashboardComponent = (function () {
         // });
     }
     DashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._patientService.getPatients().subscribe(function (resp) {
+            _this.patients = resp.json();
+            console.log(resp.json()); //.json for json response, .text for text response
+            //console.log(resp.headers);
+        }, function (err) {
+            if (err.error instanceof Error) {
+                //Client side or network error
+                console.log('An error occured:', err.error.message);
+            }
+            else {
+                //Backend returned unsuccessful response code
+                console.log('Backend return code ${err.status}, body was: ${err.error}');
+            }
+        });
     };
     DashboardComponent.prototype.closeAlert = function (alert) {
         var index = this.alerts.indexOf(alert);
@@ -363,12 +367,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_component__ = __webpack_require__("../../../../../src/app/layout/dashboard/dashboard.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared__ = __webpack_require__("../../../../../src/app/shared/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__patient_service__ = __webpack_require__("../../../../../src/app/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -385,6 +393,7 @@ DashboardModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_8__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["c" /* NgbCarouselModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["b" /* NgbAlertModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_3__dashboard_routing_module__["a" /* DashboardRoutingModule */],
@@ -395,7 +404,8 @@ DashboardModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__components__["c" /* TimelineComponent */],
             __WEBPACK_IMPORTED_MODULE_5__components__["b" /* NotificationComponent */],
             __WEBPACK_IMPORTED_MODULE_5__components__["a" /* ChatComponent */]
-        ]
+        ],
+        providers: [__WEBPACK_IMPORTED_MODULE_7__patient_service__["a" /* PatientService */]]
     })
 ], DashboardModule);
 
